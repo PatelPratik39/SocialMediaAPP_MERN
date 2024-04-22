@@ -17,13 +17,13 @@ const UserSchema = new mongoose.Schema(
     email: {
       type: String,
       required: true,
-      unique: true,
-      max: 50
+      max: 50,
+      unique: true
     },
     password: {
       type: String,
       required: true,
-      min: 2
+      min: 5
     },
     picturePath: {
       type: String,
@@ -40,6 +40,6 @@ const UserSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
-const User = mongoose.model("User", UserSchema);
 
+const User = mongoose.model("User", UserSchema);
 export default User;
